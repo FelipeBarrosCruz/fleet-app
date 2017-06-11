@@ -1,0 +1,21 @@
+{
+  "BUTTOM_SAVE": "Salvar",
+  "BUTTOM_CANCEL": "Cancelar",
+  "CREATE_MODAL_TITLE": "Criar novo registro",
+  "UPDATE_MODAL_TITLE": "Atualizar registro",
+  "PLACEHOLDER_LISCENSE_PLATE": "Placa",
+  "PLACEHOLDER_PICTURE": "Foto",
+  "PLACEHOLDER_VALUE": "Valor",
+  "OPTION_SELECT_FUEL": "Selecione um combustível",
+  "OPTION_SELECT_BRAND": "Selecione uma marca",
+  "OPTION_SELECT_MODEL": "Selecione um modelo",
+  "FUEL_TYPE_GASOLINE": "Gasolina",
+  "FUEL_TYPE_ALCOHOL": "Álcool",
+  "FUEL_TYPE_FLEX": "Flex",
+  "FUEL_TYPE_ETHANOL": "Ethanol",
+  "FUEL_TYPE_METHANOL": "Methanol",
+  "FUEL_TYPE_DISEL": "Disel",
+  "FUEL_TYPE_NATURAL_GAS": "Gás Natural",
+  "FUEL_TYPE_HYDROGEN": "Hidrogênio",
+  "FUEL_TYPE_BIODISEL": "Biodisel"
+}

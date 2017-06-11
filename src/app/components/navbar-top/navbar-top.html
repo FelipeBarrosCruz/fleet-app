@@ -1,0 +1,52 @@
+<nav class="navbar navbar-default navbar-fixed-top navbar-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <strong>Logo</strong>
+      </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse"> 
+      <div class="navbar-right">
+        <ul class="nav navbar-nav"> 
+          <li class="dropdown hidden-xs hidden-sm">
+            <a 
+              href="#" 
+              class="dropdown-toggle" 
+              data-toggle="dropdown" 
+              role="button" 
+              aria-haspopup="true" 
+              aria-expanded="false">
+                {{:: 'NAVBAR_LANGUAGE' | translate}} <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li role="menuitem" data-ng-repeat="language in navbar_top_vm.avaliableLanguages">
+                <a
+                  href
+                  data-ng-bind=":: navbar_top_vm.mapLanguageTranslationByKey[language] | translate"
+                  data-ng-click="navbar_top_vm.switchLanguage(language)">
+                  {{language}}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li 
+            class="hidden-md hidden-lg" 
+            data-ng-repeat="language in navbar_top_vm.avaliableLanguages">
+            <a
+              href
+              data-ng-bind=":: navbar_top_vm.mapLanguageTranslationByKey[language] | translate"
+              data-ng-click="navbar_top_vm.switchLanguage(language)">
+              {{language}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

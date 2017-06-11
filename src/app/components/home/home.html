@@ -1,0 +1,134 @@
+<div class="container home-page">
+  <div class="row action-area">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 action-item">
+        <div class="pull-left">
+          <button 
+            class="btn btn-primary btn-create-car" 
+            data-ng-bind=":: 'BTN_NEW_CAR' | translate"
+            data-ng-click="home_vm.doCreate()">
+            New Car
+          </button>
+        </div>
+      </div>
+      <div 
+        class="col-xs-12 col-sm-12 col-md-6 col-lg-6 action-item"
+        data-ng-if="home_vm.list.length">
+        <div class="pull-right">
+          <form class="form-inline">
+            <div class="form-group">
+              <div class="input-group">
+                <input 
+                  type="text" 
+                  class="form-control input-search" 
+                  placeholder="{{:: 'INPUT_SEARCH_PLACEHOLDER' | translate}}"
+                  data-ng-model="home_vm.searchText">
+                <div class="input-group-addon btn-search">
+                  <i class="fa fa-search search-icon"></i>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+  <div 
+    class="content-area" 
+    data-ng-if="home_vm.searchText && !(home_vm.pageList | filter:home_vm.filterByNameAndFuel).length">
+    <div class="alert alert-danger" data-ng-bind=":: 'ALERT_EMPTY_LIST' | translate">
+      There are no results that match your search
+    </div>
+  </div>
+  <div class="content-area" data-ng-if="!home_vm.pageList.length">
+    <div class="alert alert-info" data-ng-bind=":: 'ALERT_NO_REGISTER' | translate">
+      No item, create one!
+    </div>
+  </div>
+  <div 
+    class="content-area" 
+    data-ng-if="(home_vm.pageList | filter:home_vm.filterByNameAndFuel).length">
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <table class="table table-condensed table-hover table-responsive table-result">
+        <thead>
+          <tr>
+            <th class="text-center" data-ng-bind=":: 'TABLE_TH_LICENSE_PLATE' | translate">
+              Liscense Plate
+            </th>
+            <th class="text-center" data-ng-bind=":: 'TABLE_TH_MODEL' | translate">
+              Model
+            </th>
+            <th class="text-center" data-ng-bind=":: 'TABLE_TH_BRAND' | translate">
+              Brand
+            </th>
+            <th class="text-center" data-ng-bind=":: 'TABLE_TH_PICTURE' | translate">
+              Picture
+            </th>
+            <th class="text-center" data-ng-bind=":: 'TABLE_TH_FUEL' | translate">
+              Fuel
+            </th>
+            <th class="text-center" data-ng-bind=":: 'TABLE_TH_VALUE' | translate">
+              Value
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr 
+            data-ng-repeat="data in home_vm.pageListFiltered = (home_vm.pageList | filter:home_vm.filterByNameAndFuel) track by data.id">
+            <td class="text-center">
+              {{data.license_plate}}
+            </td>
+            <td class="text-center">
+              {{data.model}}
+            </td>
+            <td class="text-center">
+              {{data.brand}}
+            </td>
+            <td class="text-center">
+              <a 
+                href="{{data.picture}}" 
+                target="_blank" 
+                data-ng-bind=":: 'TABLE_TD_PICTURE' | translate">
+                Image
+              </a>
+            </td>
+            <td class="text-center">
+              {{:: home_vm.getFuelTranslateByValue(data.fuel)}}
+            </td>
+            <td class="text-center">
+              {{data.value | currency }}
+            </td>
+            <td class="text-center">
+              <button 
+                data-ng-click="home_vm.doUpdate(data)"
+                class="btn btn-sm btn-primary">
+                <i class="fa fa-pencil-square-o"></i>
+              </button>
+              <button 
+                data-ng-click="home_vm.doDelete(data)"
+                class="btn btn-sm btn-danger">
+                <i class="fa fa-trash-o"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="text-center">
+          <ul 
+          uib-pagination 
+          boundary-links="true" 
+          total-items="home_vm.list.length" 
+          items-per-page="home_vm.pagination.limit"
+          max-size="home_vm.pagination.maxSize" 
+          ng-model="home_vm.pagination.page"
+          data-ng-change="home_vm.doPaginate()"
+          class="pagination-md" 
+          previous-text="&lsaquo;" 
+          next-text="&rsaquo;" 
+          first-text="&laquo;" 
+          last-text="&raquo;"></ul>
+      </div>
+    </div>
+  </div>
+</div>

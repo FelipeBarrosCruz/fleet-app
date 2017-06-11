@@ -1,0 +1,13 @@
+{
+  "BTN_NEW_CAR": "Novo Carro",
+  "INPUT_SEARCH_PLACEHOLDER": "Procurar...",
+  "TABLE_TH_LICENSE_PLATE": "Placa",
+  "TABLE_TH_MODEL": "Modelo",
+  "TABLE_TH_BRAND": "Marca",
+  "TABLE_TH_PICTURE": "Foto",
+  "TABLE_TH_FUEL": "Combustível",
+  "TABLE_TH_VALUE": "Valor",
+  "TABLE_TD_PICTURE": "Imagem",
+  "ALERT_EMPTY_LIST": "Não há resultados que correspondem à sua busca",
+  "ALERT_NO_REGISTER": "Sem item, crie um!"
+}

@@ -1,0 +1,13 @@
+{
+  "BTN_NEW_CAR": "New Car",
+  "INPUT_SEARCH_PLACEHOLDER": "Search...",
+  "TABLE_TH_LICENSE_PLATE": "Liscense Plate",
+  "TABLE_TH_MODEL": "Model",
+  "TABLE_TH_BRAND": "Brand",
+  "TABLE_TH_PICTURE": "Picture",
+  "TABLE_TH_FUEL": "Fuel",
+  "TABLE_TH_VALUE": "Value",
+  "TABLE_TD_PICTURE": "Image",
+  "ALERT_EMPTY_LIST": "There are no results that match your search",
+  "ALERT_NO_REGISTER": "No item, create one!"
+}

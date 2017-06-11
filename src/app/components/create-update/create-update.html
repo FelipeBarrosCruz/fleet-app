@@ -1,0 +1,80 @@
+<div class="create-update-modal">
+  <div class="modal-header">
+    <h3 class="modal-title text-center">
+        {{create_update_component_vm.title}}
+    </h3>
+  </div>
+  <div class="modal-body">
+    <form class="form" name="form">
+        <div class="form-group">
+            <input 
+                type="text" 
+                placeholder="{{:: 'PLACEHOLDER_LISCENSE_PLATE' | translate}}"
+                data-ng-model="create_update_component_vm.formData.license_plate" 
+                class="form-control"
+                required>
+        </div>
+        <div class="form-group">
+            <select 
+            data-ng-model="create_update_component_vm.formData.brand" 
+            data-ng-options="brand.title as brand.title for brand in create_update_component_vm.brandTypes"
+            data-ng-change="create_update_component_vm.onChangeBrand()"
+            class="form-control"
+            required>
+                <option value data-ng-bind=":: 'OPTION_SELECT_BRAND' | translate">Select Brand</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select 
+                data-ng-model="create_update_component_vm.formData.model" 
+                data-ng-options="model.title as model.title for model in create_update_component_vm.modelTypes"
+                class="form-control"
+                required>
+                    <option value data-ng-bind=":: 'OPTION_SELECT_MODEL' | translate">Select Model</option>
+                </select>
+        </div>
+        <div class="form-group">
+            <select 
+                data-ng-model="create_update_component_vm.formData.fuel" 
+                data-ng-options="fuel.value as fuel.name | translate for fuel in create_update_component_vm.fuelTypes"
+                class="form-control" 
+                required>
+                    <option value data-ng-bind=":: 'OPTION_SELECT_FUEL' | translate">Select Fuel</option>
+                </select>
+        </div>
+        <div class="form-group">
+            <input 
+                type="text" 
+                placeholder="{{:: 'PLACEHOLDER_PICTURE' | translate}}"
+                data-ng-model="create_update_component_vm.formData.picture" 
+                class="form-control"
+                pattern="(https?:\/\/.*\.(?:png|jpg))" 
+                required>
+        </div>
+        <div class="form-group">
+            <input 
+                type="text" 
+                placeholder="{{:: 'PLACEHOLDER_VALUE' | translate}}"
+                data-ng-model="create_update_component_vm.formData.value" 
+                ui-money-mask 
+                class="form-control"
+                required>
+        </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button 
+        class="btn btn-primary" 
+        data-ng-bind=":: 'BUTTOM_SAVE' | translate"
+        data-ng-click="create_update_component_vm.doAction()"
+        data-ng-disabled="form.$invalid">
+            Create
+        </button>
+    <button 
+        class="btn btn-default" 
+        data-ng-bind=":: 'BUTTOM_CANCEL' | translate"
+        data-ng-click="create_update_component_vm.cancel()">
+            Cancel
+        </button>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+$inputHeight: 3em;
+
+.home-page {
+  .btn-create-car {
+    width: 10em;
+    height: $inputHeight;
+  }
+
+  .btn-search {
+    cursor: pointer;
+  }
+  
+  .search-icon {
+    color: #486c8c;
+  }
+  
+  .input-search {
+    height: $inputHeight;
+  }
+
+  .action-area {
+    margin-bottom: 1em;
+    .action-item {
+      margin-bottom: 1em;
+    }
+  }
+
+  .content-area {
+    .table-result {
+      border: solid 1px #CCCCCC;
+      thead {
+        tr {
+          background-color: #f8fafc;
+          th {
+            color: #42627f;
+          }
+        }
+      }
+      tbody {
+        tr:hover {
+          background-color: #d8e9fb;
+        }
+        td {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : $minWidthXS) and (max-width: $maxWidthXS) {
+  .home-page {
+    .btn-create-car {
+      width: 26.5em;
+      height: $inputHeight
+    }
+  }
+}

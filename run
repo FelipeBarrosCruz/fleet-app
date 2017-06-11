@@ -1,0 +1,1 @@
+gulp serve --NODE_ENV=production

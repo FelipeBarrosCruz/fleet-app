@@ -1,0 +1,21 @@
+{
+  "BUTTOM_SAVE": "Save",
+  "BUTTOM_CANCEL": "Cancel",
+  "CREATE_MODAL_TITLE": "Create new",
+  "UPDATE_MODAL_TITLE": "Update",
+  "PLACEHOLDER_LISCENSE_PLATE": "Liscense Plate",
+  "PLACEHOLDER_PICTURE": "Picture",
+  "PLACEHOLDER_VALUE": "Value",
+  "OPTION_SELECT_FUEL": "Select Fuel",
+  "OPTION_SELECT_BRAND": "Select Brand",
+  "OPTION_SELECT_MODEL": "Select Model",
+  "FUEL_TYPE_GASOLINE": "Gasoline",
+  "FUEL_TYPE_ALCOHOL": "Alcohol",
+  "FUEL_TYPE_FLEX": "Flex",
+  "FUEL_TYPE_ETHANOL": "Ethanol",
+  "FUEL_TYPE_METHANOL": "Methanol",
+  "FUEL_TYPE_DISEL": "Disel",
+  "FUEL_TYPE_NATURAL_GAS": "Natural Gas",
+  "FUEL_TYPE_HYDROGEN": "Hydrogen",
+  "FUEL_TYPE_BIODISEL": "Biodisel"
+}
