@@ -56,4 +56,15 @@ $inputHeight: 3em;
       height: $inputHeight
     }
   }
+  .content-area {
+    .table-result {
+      tbody {
+        td {
+          button {
+            margin: 0 0 10px;
+          }
+        }
+      }
+    }
+  }
 }
