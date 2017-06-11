@@ -28,5 +28,13 @@ __Note:__ Use super user for convenience
 sudo npm start
 ```
 
+
+### 4. To build the project
+```
+sudo gulp build
+```
+
+__Note:__ The build project are in `./dist` folder
+
 ## License
 <Liscence: MIT> Author FelipeBarrosCruz <felipe.barros.pt@gmail.com>
