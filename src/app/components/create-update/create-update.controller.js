@@ -66,8 +66,8 @@
     }
 
     function onChangeBrand () {
-      var brand = _.find(CAR_BRANDS_MODELS, { title: vm.formData.brand })
-      return vm.modelTypes = angular.isArray(brand.models) && brand.models || [];
+      var brand = _.find(CAR_BRANDS_MODELS, { title: vm.formData.brand });
+      return vm.modelTypes = brand && angular.isArray(brand.models) && brand.models || [];
     }
   }
 })();
