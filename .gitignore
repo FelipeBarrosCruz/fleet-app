@@ -38,5 +38,6 @@ coverage/
 .idea/
 .tmp/
 
+dist/
 src/app/translations.js
 src/app/index.env.js
