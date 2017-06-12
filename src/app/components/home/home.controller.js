@@ -71,8 +71,8 @@
 
     function filterByNameAndFuel (data) {
       if (!vm.searchText) return true;
-      return data.fuel.toLowerCase().indexOf(vm.searchText) >= 0 
-            || data.brand.toLowerCase().indexOf(vm.searchText) >= 0;
+      return data.fuel.toLowerCase().indexOf(vm.searchText.toLowerCase()) >= 0 
+            || data.brand.toLowerCase().indexOf(vm.searchText.toLowerCase()) >= 0;
     }
   }
 })();
